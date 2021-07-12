@@ -1,0 +1,200 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  transition: 0.3s;
+  position: relative;
+}
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.switch {
+  background-color: rgb(34, 34, 34);
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.flicker {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  position: absolute;
+  background-color: #fff;
+  transition: 0.3s;
+  top: 5px;
+  left: 5px;
+  box-shadow: inset 4px 4px 4px #fff,
+    inset -14px -14px 10px rgba(198, 198, 198, 90%);
+}
+
+.dark {
+  background-color: rgb(54, 54, 54);
+  transition: 0.3s;
+}
+
+.dark > * {
+  color: #fff;
+}
+
+.moon {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px rgb(243, 243, 29);
+  position: absolute;
+  top: 5px;
+  left: 45px;
+}
+
+.dark .flicker {
+  transform: translateX(40px);
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.main {
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-text {
+  width: 50%;
+  padding: 30px;
+}
+
+.photo {
+  width: 300px;
+}
+
+.photo img {
+  width: 200px;
+  border-radius: 150px;
+  border: 1px solid rgb(34, 34, 34);
+}
+
+.square {
+  background-color: rebeccapurple;
+  width: 98%;
+  height: 350px;
+  text-align: center;
+  margin: 1%;
+}
+
+.dark .square {
+  background-color: rgba(71, 71, 71);
+}
+
+.dub-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  position: relative;
+  width: 50%;
+  height: 350px;
+}
+
+.cube {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  transform: rotate(-25deg) skew(25deg);
+}
+
+.cube::before {
+  position: absolute;
+  content: '';
+  width: 21px;
+  height: 100%;
+  transform: skewY(-45deg);
+  left: -20px;
+  bottom: -10px;
+}
+.cube::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 20px;
+  transform: skewX(-45deg);
+  left: -10px;
+  bottom: -20px;
+}
+
+#html {
+  left: 100px;
+  bottom: 80px;
+  background-image: url('./html.png');
+  background-size: cover;
+  background-color: orangered;
+  box-shadow: -60px 60px 20px rgb(50 50 50 /50%);
+}
+#html::before {
+  background-color: rgb(204, 58, 6);
+}
+#html::after {
+  background-color: rgb(184, 81, 44);
+}
+
+#css {
+  left: 250px;
+  bottom: 240px;
+  background-image: url('./css.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: rgb(43, 153, 226);
+  box-shadow: -60px 60px 20px rgb(50 50 50 /50%);
+}
+#css::before {
+  background-color: rgb(49, 113, 156);
+}
+#css::after {
+  background-color: rgb(30, 101, 148);
+}
+
+#javascript {
+  left: 410px;
+  bottom: 80px;
+  background-image: url('./javascript.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: rgb(255, 209, 6);
+  box-shadow: -60px 60px 20px rgb(50 50 50 /50%);
+}
+#javascript::before {
+  background-color: rgb(179, 152, 34);
+}
+#javascript::after {
+  background-color: rgb(207, 172, 15);
+}
+
+@media only screen and (min-width: 970px) {
+  .square {
+    width: 48%;
+    margin: 1%;
+    height: 600px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .hero-image {
+    display: none;
+  }
+}
