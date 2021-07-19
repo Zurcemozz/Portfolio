@@ -93,6 +93,17 @@ header {
   height: 350px;
   text-align: center;
   margin: 1%;
+  color: rgb(255, 239, 239);
+  font-size: 25px;
+}
+.square h2,
+p {
+  margin-top: 15px;
+}
+
+#hulu {
+  background: linear-gradient(rgba(0, 0, 0, 0.81), rgba(26, 26, 26, 0.81)),
+    url(./images/hulu_clone.PNG) no-repeat center center/cover;
 }
 
 .dark .square {
