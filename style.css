@@ -109,6 +109,16 @@ p {
 .dark .square {
   background-color: rgba(71, 71, 71);
 }
+.square button {
+  padding: 10px 30px;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+.square button a {
+  font-weight: bold;
+  color: #000;
+}
 
 .dub-section {
   display: flex;
